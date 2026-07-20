@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Marina Fish Hunt</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="hud">
+      <div class="hud-item">Score: <span id="score">0</span></div>
+      <div class="hud-item">Lives: <span id="lives">♥♥♥♥♥♥♥♥♥♥</span></div>
+      <div class="hud-item">Size: <span id="size">Small</span></div>
+      <div class="hud-item">Threat: <span id="threat">Safe</span></div>
+    </div>
+
+    <div class="game-shell">
+      <canvas id="gameCanvas" width="960" height="600" aria-label="Marina Fish Hunt game area"></canvas>
+
+      <div id="startOverlay" class="overlay">
+        <div class="overlay-card">
+          <h1>Marina Fish Hunt</h1>
+          <p>Start as a tiny clownfish, eat smaller fish, dodge the big ones, and survive all 10 lives.</p>
+          <button id="startButton">Start Game</button>
+        </div>
+      </div>
+
+      <div id="overlay" class="overlay hidden">
+        <div class="overlay-card">
+          <h1>Game Over</h1>
+          <p id="finalScore">Final Score: 0</p>
+          <button id="restartButton">Play Again</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="controls">
+      Move with <strong>WASD</strong> or <strong>Arrow Keys</strong>.<br />
+      Eat smaller fish to grow and score points.<br />
+      Avoid larger fish or you will lose a life.
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
